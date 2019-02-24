@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+
+<head>
+<meta charset="utf-8"></meta>
+<title>bvnOnline</title>
+	
+<script src="./jquery-3.3.1.js"></script>
+<script src="./"
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("button.hide").click(function(){
+			$("div.menu").hide("slow");
+		});
+		$("button.show").click(function(){
+			$("div.menu").show("slow");
+		});
+	});
+</script>
+<script type="text/javascript">
+	while (true){
+		var currentFrame= document.getElementById('swf').CurrentFrame();
+		alert(currentFrame);
+	}
+</script> 
+<style>
+	.menu{
+	width:180px;
+	position:fixed;
+	right:5px;
+	border: 1px solid #D3ACAC ;
+	background: #8E8E8E
+	}
+</style>
+	
+</head>
+
+<body bgcolor="#3F3F3F">
+
+
+<div class="menu" id="layer1">
+<h2><strong>房间号：</strong></h2>
+	<p><input id="1" type="text" name="T1" size="10"></p>
+	<p><button type="button" >连接游戏大厅</button></p>
+	<p><button class="hide" type="button">隐藏</button></p>
+</div>
+
+<div >
+	<object classid="">
+		<p><embed id="swf" src="./BVN 2.6.swf" width="850" height="550" style="border:1px solid #FF0004"></embed></p>
+	</object>
+	<div style="background: #8E8E8E">
+		<p><button class="show" type="button" >显示菜单</button></p>
+		<p id="zhen">帧数</p>
+	</div>
+</div>
+
+</body>
+
+</html>
