@@ -74,7 +74,7 @@
 
 	<div style="background: #8E8E8E">
 		<p><button class="show" type="button" >显示菜单</button></p>
-		<p id="frame">帧数</p>
+		<in id="frame">帧数</in>
 	</div>
 </div>
 
