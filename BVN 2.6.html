@@ -83,12 +83,16 @@
     </object>
 
 	<div style="border:2px solid #D3ACAC">
-		<p><button class="show" type="button" >显示菜单</button><h2 id="frame">0</h2></p>
-		<button id="playSWF">显示帧数</button>
+		<p><button class="show" type="button" >显示菜单</button><button id="playSWF">显示帧数</button><button id="changeSWF">切换为比赛版</button><button class="hide" type="button">隐藏</button><h2 id="frame">0</h2></p>
+
         <script type="text/javascript">
-        var btn=document.getElementById("playSWF");
-	    btn.onclick=function(){
-	        document.getElementById("frame").innerHTML=document.swf.CurrentFrame()
+        var btn1=document.getElementById("playSWF");
+	    btn1.onclick=function(){
+	        document.getElementById("frame").innerHTML=document.swf.CurrentFrame();
+	    }
+	    var btn2=document.getElementById("changeSWF");
+	    btn1.onclick=function(){
+	        document.swf.src=".\BVN2.6pro\BVN 2.6pro.swf";
 	    }
         </script>
 	</div>
@@ -99,7 +103,7 @@
 	        <p><input id="1" type="text" name="T1" size="10"></p>
 	        <p><button type="button" >连接游戏大厅</button></p>
             <br/>
-	        <p><button class="hide" type="button">隐藏</button></p>
+
         </div>
     </div>
 </div>
