@@ -29,8 +29,7 @@
     background-color:white;
     }
 	#menu{
-	width:150px;
-	position:fixed;
+	width:100%;
 	border: 1px solid #D3ACAC ;
 	background: white;
 	}
@@ -46,8 +45,8 @@
 	}
 	#box{
 	width:1208px;
+	height:700px;
 	margin:0px auto;
-	background-color:gray;
 	}
 	button{
 	width: 100px; /* 宽度 */
@@ -61,12 +60,46 @@
 	color: white; /* 字体颜色 */
 	font-size: 15px; /* 字体大小 */
     }
+    #top{
+    width:100%;
+    height:100px;
+    background-color:gray;
+    }
+    #main{
+    width:100%;
+    height:1000px;
+    background-color:white;
+    }
+    #botton{
+    width:100%;
+    height:100px;
+    background-color:gray;
+    }
+    input{
+    border: 1px solid #ccc;
+    padding: 7px 0px;
+    border-radius: 3px;
+    padding-left:5px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s
+    }
+    input:focus{
+    border-color: #66afe9;
+    outline: 0;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+    }
 </style>
 	
 </head>
 
 <body>
-<div id="box">
+<div id="top"></div>
+<div id="main">
+    <div id="box">
     <div id="left">
         <object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" width="400" height="300" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" id="swf">
         <param name="movie" value="BVN.swf">
@@ -84,29 +117,44 @@
 
 	<div style="border:2px solid #D3ACAC">
 		<p><button class="show" type="button" >显示菜单</button><button id="playSWF">显示帧数</button><button id="changeSWF">切换为比赛版</button><button class="hide" type="button">隐藏</button><h2 id="frame">0</h2></p>
+        <div id="menu">
+            <h2><strong>房间号：</strong></h2>
+	        <p><input id="1" type="text" name="T1" size="25"></p>
+            <br/>
+	        <p><button type="button">连接游戏大厅</button></p>
+            <br>
 
+        </div>
         <script type="text/javascript">
         var btn1=document.getElementById("playSWF");
+        var btn2=document.getElementById("changeSWF");
+        var game = "1";
 	    btn1.onclick=function(){
 	        document.getElementById("frame").innerHTML=document.swf.CurrentFrame();
 	    }
-	    var btn2=document.getElementById("changeSWF");
-	    btn1.onclick=function(){
-	        document.swf.src=".\BVN2.6pro\BVN 2.6pro.swf";
+
+	    btn2.onclick=function(){
+	    if(game == "1"){
+	        document.swf.src="./BVN2.6pro/BVN 2.6pro.swf";
+	        document.getElementById("changeSWF").innerHTML="切换为普通版";
+	        game = "2";
+	    }else if (game == "2"){
+	        document.swf.src="./BVN.swf";
+	        document.getElementById("changeSWF").innerHTML="切换为比赛版";
+	        game = "1";
+
+	    }
 	    }
         </script>
 	</div>
     </div>
     <div id="right">
-        <div id="menu">
-            <h2><strong>房间号：</strong></h2>
-	        <p><input id="1" type="text" name="T1" size="10"></p>
-	        <p><button type="button" >连接游戏大厅</button></p>
-            <br/>
 
-        </div>
+    </div>
+    </div>
     </div>
 </div>
+<div id="botton"></div>
 </body>
 
 </html
