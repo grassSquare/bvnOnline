@@ -92,6 +92,30 @@
     -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
     box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
     }
+    table.hovertable {
+	font-family: verdana,arial,sans-serif;
+	font-size:11px;
+	color:#333333;
+	border-width: 1px;
+	border-color: #999999;
+	border-collapse: collapse;
+    }
+    table.hovertable th {
+	background-color:#c3dde0;
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #a9c6c9;
+    }
+    table.hovertable tr {
+	background-color:#d4e3e5;
+    }
+    table.hovertable td {
+	border-width: 1px;
+	padding: 8px;
+	border-style: solid;
+	border-color: #a9c6c9;
+    }
 </style>
 	
 </head>
@@ -116,7 +140,7 @@
     </object>
 
 	<div style="border:2px solid #D3ACAC">
-		<p><button class="show" type="button" >显示菜单</button><button id="playSWF">显示帧数</button><button id="changeSWF">切换为比赛版</button><button class="hide" type="button">隐藏</button><h2 id="frame">0</h2></p>
+		<p><button class="show" type="button" >显示菜单</button><button class="hide" type="button">隐藏菜单</button><button id="playSWF">显示帧数</button><button id="changeSWF">切换为比赛版</button><h2 id="frame">0</h2></p>
         <div id="menu">
             <h2><strong>房间号：</strong></h2>
 	        <p><input id="1" type="text" name="T1" size="25"></p>
@@ -149,7 +173,28 @@
 	</div>
     </div>
     <div id="right">
-
+<div>
+<table class="hovertable">
+<tr>
+	<th>Info Header 1</th><th>Info Header 2</th>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d4e3e5';">
+	<td>Item 1A</td><td>Item 1B</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d4e3e5';">
+	<td>Item 2A</td><td>Item 2B</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d4e3e5';">
+	<td>Item 3A</td><td>Item 3B</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d4e3e5';">
+	<td>Item 4A</td><td>Item 4B</td>
+</tr>
+<tr onmouseover="this.style.backgroundColor='#ffff66';" onmouseout="this.style.backgroundColor='#d4e3e5';">
+	<td>Item 5A</td><td>Item 5B</td>
+</tr>
+</table>
+</div>
     </div>
     </div>
     </div>
