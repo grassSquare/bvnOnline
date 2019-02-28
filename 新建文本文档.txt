@@ -1,3 +1,6 @@
 www.30ok
-https://blog.csdn.net/lzkkevin/article/details/6789593
+https://blog.csdn.net/lzkkevin/article/details/6789593	JS控制网页中Flash影片的播放（附带各参数） - Kevin's blog - CSDN博客
 https://www.cnblogs.com/zhishaofei/p/4237669.html
+https://blog.csdn.net/qq_34809033/article/details/81873896
+https://www.liaoxuefeng.com/wiki/0014316089557264a6b348958f449949df42a6d3a2e542c000/001432004374523e495f640612f4b08975398796939ec3c000
+https://docs.djangoproject.com/zh-hans/2.1/intro/tutorial01/
